@@ -1,0 +1,46 @@
+## Cloning remote repo from github to local
+
+git clone https://github.com/pauledgarson/FlyLFM-Paul.git
+
+
+## cd into git folder
+
+cd /home/paul/FlyLFM-Paul
+
+
+## Updating changes made in local on remote
+
+git add .
+git commit -m "message"
+
+# putting in email and user of remote
+git commit -m "deleting some stuff"
+git config user.name "pauledgarson"
+
+# Pushing changes up to remote
+git push -u origin main
+
+
+## Updating changes made in remote on local
+
+git pull origin main
+
+
+
+## other useful commands
+
+git remote -v
+
+git status
+
+
+
+
+
+
+
+
+
+
+
+
