@@ -18,21 +18,21 @@ ResponsesSucFed=cat(4,StimResponses184,StimResponses195,StimResponses196,StimRes
 ResponsesWatFed=cat(4,StimResponses185,StimResponses194,StimResponses197,StimResponses206,StimResponses209,StimResponses212);
 ResponsesQuiFed=cat(4,StimResponses186,StimResponses193,StimResponses198,StimResponses207,StimResponses208,StimResponses211);
 
-%calculating the mean Peaks over animals and then over trials
-AvgPeaksSuc=mean(PeaksSucFed,3);
-AvgPeaksWat=mean(PeaksWatFed,3);
-AvgPeaksQui=mean(PeaksQuiFed,3);
+% %calculating the mean Peaks over animals and then over trials
+% AvgPeaksSuc=mean(PeaksSucFed,3);
+% AvgPeaksWat=mean(PeaksWatFed,3);
+% AvgPeaksQui=mean(PeaksQuiFed,3);
 
-AvgPeaksSucON=mean([AvgPeaksSuc(1,:);AvgPeaksSuc(3,:);AvgPeaksSuc(5,:)]);
-AvgPeaksSucOFF=mean([AvgPeaksSuc(2,:);AvgPeaksSuc(4,:);AvgPeaksSuc(6,:)]);
-
-AvgPeaksWatON=mean([AvgPeaksWat(1,:);AvgPeaksWat(3,:);AvgPeaksWat(5,:)]);
-AvgPeaksWatOFF=mean([AvgPeaksWat(2,:);AvgPeaksWat(4,:);AvgPeaksWat(6,:)]);
-
-AvgPeaksQuiON=mean([AvgPeaksQui(1,:);AvgPeaksQui(3,:);AvgPeaksQui(5,:)]);
-AvgPeaksQuiOFF=mean([AvgPeaksQui(2,:);AvgPeaksQui(4,:);AvgPeaksQui(6,:)]);
-
-AvgPeaks=[AvgPeaksSucON;AvgPeaksSucOFF;AvgPeaksWatON;AvgPeaksWatOFF;AvgPeaksQuiON;AvgPeaksQuiOFF];
+% AvgPeaksSucON=mean([AvgPeaksSuc(1,:);AvgPeaksSuc(3,:);AvgPeaksSuc(5,:)]);
+% AvgPeaksSucOFF=mean([AvgPeaksSuc(2,:);AvgPeaksSuc(4,:);AvgPeaksSuc(6,:)]);
+% 
+% AvgPeaksWatON=mean([AvgPeaksWat(1,:);AvgPeaksWat(3,:);AvgPeaksWat(5,:)]);
+% AvgPeaksWatOFF=mean([AvgPeaksWat(2,:);AvgPeaksWat(4,:);AvgPeaksWat(6,:)]);
+% 
+% AvgPeaksQuiON=mean([AvgPeaksQui(1,:);AvgPeaksQui(3,:);AvgPeaksQui(5,:)]);
+% AvgPeaksQuiOFF=mean([AvgPeaksQui(2,:);AvgPeaksQui(4,:);AvgPeaksQui(6,:)]);
+% 
+% AvgPeaks=[AvgPeaksSucON;AvgPeaksSucOFF;AvgPeaksWatON;AvgPeaksWatOFF;AvgPeaksQuiON;AvgPeaksQuiOFF];
 
 %calculating the mean Response over animals and then over trials
 AvgRespSuc=mean(ResponsesSucFed,4);
@@ -51,8 +51,8 @@ AvgRespQuiOFF=mean(cat(3,AvgRespQui(:,:,2),AvgRespQui(:,:,4),AvgRespQui(:,:,6)),
 AvgResponse=cat(3,AvgRespSucON,AvgRespSucOFF,AvgRespWatON,AvgRespWatOFF,AvgRespQuiON,AvgRespQuiOFF);
 
 % recalculating peaks
-AvgPeaks2=max(AvgResponse([1:30],:,:),[],1)-mean(AvgResponse([1:15],:,:),1)
-AvgPeaks2=reshape(AvgPeaks2,[12,6]);
+AvgPeaks2=squeeze(max(AvgResponse([1:30],:,:),[],1)-mean(AvgResponse([1:15],:,:),1));
+
 
 regionslist={'OL';'CX';'LX';'LH';'PENP';'INP';'VMNP';'MB';'AL';'SNP';'VLNP';'GNG'};
 
