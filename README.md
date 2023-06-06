@@ -1,16 +1,12 @@
-# FlyLFM
-This repository contains code used for the fly whole brain activity experiments and analysis.
+# FlyLFM-Paul
+This repository contains code used for processing and analysis of whole brain light field microscopy data.
 
-Several files were contributed by Tongqiu Jia.
+It contains code from sophie63/FlyLFM repository, used in this publication: https://doi.org/10.1371/journal.pbio.2006732
+Some of the code was partially adapted and mainly used for initial image processing. 
+The adapted code is contained in the following folders:
+-Data Analysis Pipeline
+-fieldtrip-master
+-MatlabICA
+-Preprocess
 
-The file starting with A_ corresponds to the code used for the analysis in
-http://biorxiv.org/content/early/2015/12/10/033803
-
-FIJIMacros folder includes Macro scripts for FIJI to process images.
-MatlabFiles folder has matlab scripts for each step of the analysis.
-
-
-Summarize the pipeline
-
-dFF_psf_KF_file
-A_ICAalaMelodic or A_AverageDifferencesMapsStimuli
+The rest of the code was created by pauledgarson, unless stated otherwise. 
