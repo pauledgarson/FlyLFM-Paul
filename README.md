@@ -1,4 +1,7 @@
 # FlyLFM-Paul
+
+!! This repository is out of date. For more recent code (June 2023) see Code Paul Thesis. !!
+
 This repository contains code used for processing and analysis of whole brain light field microscopy data.
 
 It contains code from sophie63/FlyLFM repository, used in this publication: https://doi.org/10.1371/journal.pbio.2006732
